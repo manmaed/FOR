@@ -1,5 +1,5 @@
 local function installFOR()
-    local baseURL = "https://raw.githubusercontent.com/modmuss50/FOR/master/lua/"
+    local baseURL = "https://raw.githubusercontent.com/manmaed/FOR/master/lua/"
 
     print("Downloading file list")
 
@@ -36,3 +36,5 @@ function getUrlSuffix()
 end
 
 installFOR()
+print("!!!IMPORTANT!!!")
+print("Please Edit the port number in uitils.lua")

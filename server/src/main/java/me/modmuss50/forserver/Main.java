@@ -4,19 +4,20 @@ package me.modmuss50.forserver;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import io.javalin.Javalin;
-import sun.dc.pr.PathFiller;
 
 import java.io.IOException;
-import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 public class Main  {
 
-	public static Javalin APP = Javalin.create().start(9999);
+	public static int port = 0;
+
+	public static Javalin APP = Javalin.create();
 	public static Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 	public static DataManager dataManager;
+
 
 	static {
 		try {
@@ -27,6 +28,11 @@ public class Main  {
 	}
 
 	public static void main(String[] args) {
+
+		String pargs = args[0];
+		int port = Integer.parseInt(pargs);
+
+		APP.start(port);
 
 		APP.get("/", ctx -> ctx.result("Hello"));
 
