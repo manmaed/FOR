@@ -1,5 +1,5 @@
 local function installFOR()
-    local baseURL = "https://raw.githubusercontent.com/manmaed/FOR/master/lua/"
+    local baseURL = "https://raw.githubusercontent.com/manmaed/FOR/manmaed/lua/"
 
     print("Downloading file list")
 
